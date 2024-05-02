@@ -12,6 +12,7 @@ public class mainf {
         System.out.println("- touch");
         System.out.println("- mkdir");
         System.out.println("- rm");
+        System.out.println("- cd");
         System.out.println("- mv");
         System.out.println("- cp");
         System.out.println("- cp -r");
@@ -21,9 +22,11 @@ public class mainf {
         System.out.println("- size");
         System.out.println("- cat");
         Scanner scanner = new Scanner(System.in);
+        while (true) {
+        System.out.println("Enter the command you want to use: (type quit to exit)");
         String command = scanner.nextLine().trim().toLowerCase(); // Read u
         
-        System.out.println("Enter the command you want to use:");
+        
 
         // Create Scanner object to read user input
        // Scanner scanner = new Scanner(System.in);
@@ -79,15 +82,21 @@ public class mainf {
           CreateFilDir new1 = new CreateFilDir();
           new1.echoAppend();
           
-      } else {
+      } else if (command.equals("quit")){
+    	  System.out.println("Exiting program...");
+          break;
+          
+      }
+      else {
           System.out.println("Invalid command. Please enter one of the provided commands.");
       }
 
         // Close Scanner
-        scanner.close();
+        
  
 	}
-		
+        scanner.close();
+	}	
 		
 
 		
