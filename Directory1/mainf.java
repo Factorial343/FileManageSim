@@ -12,7 +12,6 @@ public class mainf {
         System.out.println("- touch");
         System.out.println("- mkdir");
         System.out.println("- rm");
-        System.out.println("- cd");
         System.out.println("- mv");
         System.out.println("- cp");
         System.out.println("- cp -r");
