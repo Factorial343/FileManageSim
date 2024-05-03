@@ -56,6 +56,7 @@ public class CreateFilDir {
 			  String name = scan.nextLine();
 			  File myObj = new File(name);
 			  boolean folder = myObj.mkdirs();
+			  System.out.println("Folder created: " + myObj.getName());
 			  
 		  }
 		  public void pwd() {
@@ -83,7 +84,7 @@ public class CreateFilDir {
 			  System.out.print("Input: ");
 			  String name = scan.nextLine();
 			  File myObj = new File(name);
-			   System.out.print(myObj.length());
+			   System.out.print("The size of "+myObj.getName()+" is "+ myObj.length());
 		  }
 		  public static void copyDirectory (File sourceDirectory, File destinationDirectory) throws IOException {
 		        if(!destinationDirectory.exists()){ //checks that destination directory exists, if it doesn't a new directory is created.
@@ -158,7 +159,7 @@ public class CreateFilDir {
 		    	        File destFile = new File(destination);
 
 		    	        if (sourceFile.renameTo(destFile)) {
-		    	            System.out.println("File/directory moved successfully.");
+		    	            System.out.println(source + " moved successfully to "+ destination);
 		    	        } else {
 		    	            System.out.println("Failed to move file/directory.");
 		    	        }
