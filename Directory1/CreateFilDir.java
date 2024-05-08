@@ -13,7 +13,7 @@ public class CreateFilDir {
 		  System.out.print("Input: ");
 		  String name = scan.nextLine();
 		    try {
-		        File myObj = new File(name+".txt");
+		        File myObj = new File(name);
 		        if (myObj.createNewFile()) {
 		          System.out.println("File created: " + myObj.getName());
 		        } 
@@ -41,13 +41,13 @@ public class CreateFilDir {
 			  System.out.print("Input: ");
 			  String name = scan.nextLine();
 		
-			        File myObj = new File(name+".txt");
+			        File myObj = new File(name);
 			        if (myObj.exists()) {
 			        	System.out.println("File deleted: " + myObj.getName());
 			        	myObj.delete();
 			        }
 			        else {
-			        	System.out.println("File not found: " +name+".txt");
+			        	System.out.println("File not found: " +name);
 			        }
 		  }
 		  public void mkdir() {
@@ -84,7 +84,7 @@ public class CreateFilDir {
 			  System.out.print("Input: ");
 			  String name = scan.nextLine();
 			  File myObj = new File(name);
-			   System.out.print("The size of "+myObj.getName()+" is "+ myObj.length());
+			   System.out.println("The size of "+myObj.getName()+" is "+ myObj.length());
 		  }
 		  public static void copyDirectory (File sourceDirectory, File destinationDirectory) throws IOException {
 		        if(!destinationDirectory.exists()){ //checks that destination directory exists, if it doesn't a new directory is created.
@@ -164,10 +164,10 @@ public class CreateFilDir {
 		    	            System.out.println("Failed to move file/directory.");
 		    	        }
 
-		    	        scanner.close();
+		    	        
 		    	    }
 
-
+		
 
 
 
