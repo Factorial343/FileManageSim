@@ -18,8 +18,8 @@ public class mainf {
         System.out.println("- ls");
         System.out.println("- pwd");
         System.out.println("- renamef");
-        System.out.println("- size");
         System.out.println("- cat");
+        System.out.println("- size");
         Scanner scanner = new Scanner(System.in);
         while (true) {
         System.out.println("Enter the command you want to use: (type quit to exit)");
@@ -50,16 +50,27 @@ public class mainf {
           new1.mv();
       } else if (command.equals("cp")) {
           System.out.println("You have selected the 'cp' command.");
-          File copy1 = new File("C:\\Users\\KarlfromAllState\\eclipse-workspace\\439Proj\\Dir1\\SpecificFile.txt");
-          File des1 = new File("C:\\Users\\KarlfromAllState\\eclipse-workspace\\439Proj\\Dir1\\max.txt");
+          Scanner scan = new Scanner(System.in);
+	        System.out.print("Enter the file's location you would like to copy (with 2 \\):  ");
+	        String source = scan.nextLine();
+	        System.out.print("Enter where you would like to copy the file to (include the copy's name): ");
+	        String copy = scan.nextLine();
+	        
+          File copy1 = new File(source);
+          File des1 = new File(copy);
           CreateFilDir.copyDirectoryMode(copy1, des1);
-          System.out.println("Specific File has been copied to destination 439 Proj");
+          System.out.println("Specific File has been copied to destination Dir1 (max.txt)");
       } else if (command.equals("cp -r")) {
           System.out.println("You have selected the 'cp -r' command.");
-          File copy1 = new File("C:\\Users\\KarlfromAllState\\eclipse-workspace\\439Proj\\folder");
-          File des1 = new File("C:\\Users\\KarlfromAllState\\eclipse-workspace\\439Proj");
+          Scanner scan = new Scanner(System.in);
+	        System.out.print("Enter the file's location you would like to copy (with 2 \\):  ");
+	        String source = scan.nextLine();
+	        System.out.print("Enter where you would like to copy the file to (include the copy's name): ");
+	        String copy = scan.nextLine();
+          File copy1 = new File(source);
+          File des1 = new File(copy);
           CreateFilDir.copyDirectoryMode(copy1, des1);
-          System.out.println("The contents of folder have been transsferred to 439 Proj");
+          System.out.println("The contents of testfolder1 have been transferred to folder");
       } else if (command.equals("ls")) {
           System.out.println("You have selected the 'ls' command.");
           CreateFilDir new1 = new CreateFilDir();
